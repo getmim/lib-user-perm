@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'lib-user-perm',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/lib-user-perm.git',
     '__license' => 'MIT',
     '__author' => [
@@ -39,5 +39,34 @@ return [
     ],
     'service' => [
         'can_i' => 'LibUserPerm\\Service\\CanI'
+    ],
+    'libFormatter' => [
+        'formats' => [
+            'user-perm-role' => [
+                'id' => [
+                    'type' => 'number'
+                ],
+                'name' => [
+                    'type' => 'text',
+                ],
+                'about' => [
+                    'type' => 'text'
+                ],
+                'created' => [
+                    'type' => 'date'
+                ]
+            ],
+            'user' => [
+                'role' => [
+                    'type' => 'object',
+                    'model' => [
+                        'name' => 'LibUserPerm\\Model\\UserPermRole',
+                        'field' => 'id',
+                        'type' => 'number'
+                    ],
+                    'format' => 'user-perm-role'
+                ]
+            ]
+        ]
     ]
 ];
