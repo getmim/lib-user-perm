@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'lib-user-perm',
-    '__version' => '0.0.2',
+    '__version' => '0.0.3',
     '__git' => 'git@github.com:getmim/lib-user-perm.git',
     '__license' => 'MIT',
     '__author' => [
@@ -42,9 +42,35 @@ return [
     ],
     'libFormatter' => [
         'formats' => [
+            'user-perm' => [
+                'id' => [
+                    'type' => 'number'
+                ],
+                'name' => [
+                    'type' => 'text'
+                ],
+                'group' => [
+                    'type' => 'text'
+                ],
+                'about' => [
+                    'type' => 'text'
+                ],
+                'created' => [
+                    'type' => 'date'
+                ]
+            ],
             'user-perm-role' => [
                 'id' => [
                     'type' => 'number'
+                ],
+                'user' => [
+                    'type' => 'object',
+                    'model' => [
+                        'name' => 'LibUser\\Library\\Fetcher',
+                        'field' => 'id',
+                        'type' => 'number'
+                    ],
+                    'format' => 'user'
                 ],
                 'name' => [
                     'type' => 'text',

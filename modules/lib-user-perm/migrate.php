@@ -121,6 +121,14 @@ return [
                 ],
                 'index' => 0
             ],
+            'user' => [
+                'type' => 'INT',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => false
+                ],
+                'index' => 1000
+            ],
             'name' => [
                 'type' => 'VARCHAR',
                 'length' => 50,
@@ -128,7 +136,7 @@ return [
                     'unique' => true,
                     'null' => false
                 ],
-                'index' => 1000
+                'index' => 2000
             ],
             'about' => [
                 'type' => 'VARCHAR',
@@ -159,7 +167,7 @@ return [
                 ],
                 'index' => 0
             ],
-            'role' => [
+            'user' => [
                 'type' => 'INT',
                 'attrs' => [
                     'unsigned' => true,
@@ -167,7 +175,7 @@ return [
                 ],
                 'index' => 1000
             ],
-            'perm' => [
+            'role' => [
                 'type' => 'INT',
                 'attrs' => [
                     'unsigned' => true,
@@ -175,12 +183,20 @@ return [
                 ],
                 'index' => 2000
             ],
+            'perm' => [
+                'type' => 'INT',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => false
+                ],
+                'index' => 3000
+            ],
             'created' => [
                 'type' => 'TIMESTAMP',
                 'attrs' => [
                     'default' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 3000
+                'index' => 4000
             ]
         ],
         'indexes' => [
