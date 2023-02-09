@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'lib-user-perm',
-    '__version' => '0.0.3',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getmim/lib-user-perm.git',
     '__license' => 'MIT',
     '__author' => [

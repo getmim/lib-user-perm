@@ -7,8 +7,7 @@ return [
                 'type' => 'INT',
                 'attrs' => [
                     'unsigned' => true,
-                    'default' => 0,
-                    'null' => false
+                    'null' => true
                 ],
                 'index' => 5001
             ]
